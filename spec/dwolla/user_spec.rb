@@ -52,6 +52,7 @@ describe Dwolla::User do
 
       Dwolla::Transaction.should_receive(:new).with(:origin => user,
                                             :destination => destination_user,
+                                            :destination_type => nil,
                                             :amount => 10,
                                             :type => :send,
                                             :pin => '2222').and_return(transaction)
