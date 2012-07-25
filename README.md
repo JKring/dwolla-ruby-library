@@ -17,7 +17,7 @@ gem install dwolla
 * Transactions Listing
 * Transactions Details by ID
 * Transactions Stats
-* Send and Request Transactions with Other Id types (Facebook, Twitter, Email, or Phone.)
+* Request Transactions with Other Id types (Facebook, Twitter, Email, or Phone.)
 
 ## Usage
 
@@ -81,6 +81,14 @@ gem install dwolla
 
   user.send_money_to(other_user_id, amount, pin)
 ```
+
+You can also send money to a Facebook id, Twitter handle, Email address, or Phone number by passing the destination type as the (optional) fourth parameter.
+
+```ruby
+  user.send_money_to('mike@dwolla.com', amount, pin, 'email')
+  user.send_money_to('baconseason', amount, pin, 'twitter')
+```
+
 
 ##### Requesting Money 
 
